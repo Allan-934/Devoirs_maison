@@ -1,0 +1,22 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        [cite_start]// Initialisation de l'étudiant 
+        Etudiant etu = new Etudiant();
+        etu.Init("Martinez", "Jean");
+
+        [cite_start]// Création et ajout du projet spécifique 
+        Projet proj1 = new Projet();
+        proj1.SetLibelle("Gestion des étudiants");
+        proj1.SetNote(17.5);
+        
+        etu.AjouterProjet(proj1);
+
+        // Affichage pour vérification
+        Console.WriteLine($"Étudiant : {etu.GetPrenom()} {etu.GetNom()}");
+        Console.WriteLine($"Moyenne : {etu.GetMoyenne()}");
+        Console.WriteLine($"Meilleur projet : {etu.MeilleurProjet().GetLibelle()}");
+    }
+}

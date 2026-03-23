@@ -1,0 +1,33 @@
+public class Projet
+{
+    private string libelle; // libell du projet 
+    private double note;    // note obtenu par ltudiant 
+
+    public void Init(string p_libelle, double p_note) // initialisation dun projet 
+    {
+        this.libelle = p_libelle;
+        this.note = p_note;
+    }
+
+    // Setters (sans utiliser les propriétés C#)
+    public void SetLibelle(string p_libelle)
+    {
+        this.libelle = p_libelle;
+    }
+
+    public void SetNote(double p_note)
+    {
+        this.note = p_note;
+    }
+
+    // Getters 
+    public string GetLibelle()
+    {
+        return this.libelle;
+    }
+
+    public double GetNote()
+    {
+        return this.note;
+    }
+}
